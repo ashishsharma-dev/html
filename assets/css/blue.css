@@ -182,6 +182,13 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.mobile-image {
+  max-width: 75% !important;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 ::selection {
   background: #4278E5;
   color: #fff;
@@ -201,6 +208,7 @@ body {
 
 .section .bg-top {
   position: absolute;
+  z-index: -2;
   width: 290px;
   height: 393px;
   top: 0px;
@@ -1115,6 +1123,13 @@ welcome
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .welcome-area .header-text .email-box .input button {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
 .welcome-area .header-text .email-box span {
   display: block;
   margin-top: 54px;
@@ -1198,6 +1213,10 @@ welcome
 
   .welcome-area .right-bg {
     width: 100%;
+  }
+
+  .right-bg>img {
+    height: 55vh !important;
   }
 
   .welcome-area .header-bg {
